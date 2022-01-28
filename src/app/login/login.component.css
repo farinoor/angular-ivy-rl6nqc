@@ -1,0 +1,17 @@
+.newlogin {
+  background-color: aquamarine;
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
+  color: blue;
+  padding: 10px;
+}
+.login-group {
+  color: blue;
+  padding: auto;
+}
+button {
+  color: blue;
+  background-color: chartreuse;
+  padding: 20px;
+}

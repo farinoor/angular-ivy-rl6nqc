@@ -1,0 +1,22 @@
+<button (click)="hello()">HELLO</button>
+<input type="text" />
+<input [type]="controlType" />
+<input type="text" value="hi" />
+<input [value]="hello1" />
+<button (click)="welcome()">WELCOME</button>
+<p>DUMMY</p>
+<div>
+  <p>Show A</p>
+  <p [hidden]="conditionApply">A Data</p>
+</div>
+<div>
+  <p>Show B</p>
+  <p *ngIf="!conditionApply">B Data</p>
+</div>
+<div>
+  <button (click)="changing()">click</button>
+</div>
+<div>
+  <p>ngfor directive</p>
+  <p *ngFor="let variable of TsArray">sample text{{ variable }}</p>
+</div>

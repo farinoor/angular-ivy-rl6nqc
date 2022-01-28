@@ -1,0 +1,39 @@
+table,
+th,
+td {
+  border: 1px solid green;
+  border-collapse: collapse;
+  padding: 10px;
+}
+th {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.m-b-10 {
+  margin-bottom: 10px;
+}
+select {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.button-det {
+  background-color: purple;
+  border-color: purple;
+  color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-det:hover {
+  background-color: #bf0000;
+}
+.option:hover {
+  background-color: green;
+  cursor: pointer;
+}
+.option {
+  background-color: palevioletred;
+}

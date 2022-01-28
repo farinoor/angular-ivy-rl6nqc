@@ -1,0 +1,25 @@
+.signup {
+  background-color: burlywood;
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
+  color: crimson;
+  padding: 10px;
+}
+.signup-box {
+  color: crimson;
+  padding: auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.signup-button {
+  text-align: center;
+}
+button {
+  color: crimson;
+  background-color: cadetblue;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}

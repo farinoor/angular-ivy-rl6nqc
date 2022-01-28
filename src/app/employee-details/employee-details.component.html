@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="employee">
+    <div>
+      <img
+        src="https://www.iconninja.com/files/617/395/648/person-administrator-male-geek-employee-man-member-admin-user-human-suit-account-people-profile-icon.png"
+        height="100"
+        width="100"
+        style="margin-top: 15px;"
+      />
+    </div>
+    <div class="details">
+      <span style="margin-bottom: 10px;"><b>Name</b></span>
+      <button routerLink="/employee">Back</button>
+    </div>
+  </div>
+
+  <div>
+    <h3>Employee details</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>{{ employee.Name }}</td>
+        <td>{{ employee2.Name }}</td>
+      </tr>
+      <tr>
+        <th>age</th>
+        <td>{{ employee.Age }}</td>
+        <td>{{ employee2.Age }}</td>
+      </tr>
+      <tr>
+        <th>street</th>
+        <td>{{ employee.Street }}</td>
+        <td>{{ employee2.Street }}</td>
+      </tr>
+      <tr>
+        <th>city</th>
+        <td>{{ employee.City }}</td>
+      </tr>
+      <tr>
+        <th>zip</th>
+        <td>{{ employee.Zip }}</td>
+      </tr>
+      <tr>
+        <th>region</th>
+        <td>{{ employee.Region }}</td>
+      </tr>
+      <tr>
+        <th>country</th>
+        <td>{{ employee.Country }}</td>
+      </tr>
+      <tr>
+        <th>Info</th>
+        <td>{{ employee.Info }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

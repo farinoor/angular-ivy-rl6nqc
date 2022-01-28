@@ -1,0 +1,21 @@
+<div class="employee" *ngFor="let item of employeeArray">
+  <img
+    src="https://www.iconninja.com/files/617/395/648/person-administrator-male-geek-employee-man-member-admin-user-human-suit-account-people-profile-icon.png"
+    height="100"
+    width="100"
+  />
+  <div>
+    <div>Name:{{ item.Name }}</div>
+    <!-- <div>Age:{{ item.Age }}</div>
+    <div>Email:{{ item.Email }}</div>
+    <div>Street:{{ item.Street }}</div>
+    <div>City:{{ item.City }}</div>
+    <div>Zip:{{ item.Zip }}</div>
+    <div>Region: {{ item.Region }}</div>
+    <div>Country: {{ item.Country }}</div>
+    <div>Info:{{ item.Info }}</div> -->
+    <div>EmployeeID:{{ item.EmployeeID }}</div>
+
+    <button routerLink="/employee-details" (click)="viewDetails()">View</button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.employee {
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+  color: black;
+  background-color: #b8eaf8;
+  height: 12em;
+  width: 10em;
+  align-items: center;
+  place-content: center;
+  border-radius: 10px;
+}
+tr,
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+  margin-right: 10%;
+}
+.details {
+  display: grid;
+  align-items: center;
+  place-content: center;
+}
+.container {
+  width: 70%;
+  align-items: center;
+  place-content: space-around;
+  display: inline-flex;
+}
+button {
+  background-color: #8c61d3;
+  border: none;
+  color: white;
+  padding: 5px 36px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+}
