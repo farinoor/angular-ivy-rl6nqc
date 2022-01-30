@@ -1,4 +1,4 @@
-<div class="employee" *ngFor="let item of employeeArray">
+<div class="employee" *ngFor="let item of employeeArray; index as i">
   <img
     src="https://www.iconninja.com/files/617/395/648/person-administrator-male-geek-employee-man-member-admin-user-human-suit-account-people-profile-icon.png"
     height="100"
@@ -16,6 +16,6 @@
     <div>Info:{{ item.Info }}</div> -->
     <div>EmployeeID:{{ item.EmployeeID }}</div>
 
-    <button routerLink="/employee-details">View</button>
+    <button (click)="View(i)" routerLink="/employee-details">View</button>
   </div>
 </div>

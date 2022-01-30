@@ -13,4 +13,9 @@ export class EmployeeComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  view(index: number) {
+    // alert(index);
+    this.emp.selectedEmployee = index;
+  }
 }
