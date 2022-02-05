@@ -1,13 +1,17 @@
 <form #f="ngForm" class="signup">
   <div class="signup-box">
     <label for="username">USER NAME</label>
-    <input type="text" name="username" ngModel />
+    <input required type="text" name="userName" #userName ngModel />
+    <small *ngIf="f?.touched">username is touched</small>
+    <small *ngIf="f?.untouched">username is untouched</small>
+    <small *ngIf="f?.dirty">username is dirty</small>
+    <small *ngIf="f?.pristine">username is pristine</small>
   </div>
   <div class="signup-box">
     <label for="password">PASSWORD</label>
-    <input type="text" />
+    <input required type="text" name="password" ngModel />
   </div>
   <div class="signup-button">
-    <button (click)="senduserdata(f)">BUTTON</button>
+    <button [disabled]="f.invalid" (click)="senduserdata(f)">BUTTON</button>
   </div>
 </form>

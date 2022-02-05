@@ -23,3 +23,16 @@ button {
   font-weight: bold;
   text-align: center;
 }
+small {
+  width: 100%;
+  color: red;
+  display: block;
+}
+button:disabled {
+  color: orange;
+  background-color: grey;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
