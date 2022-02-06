@@ -8,10 +8,11 @@
 }
 .login-group {
   color: blue;
-  padding: auto;
+  padding: 10px;
 }
 button {
   color: blue;
   background-color: chartreuse;
   padding: 20px;
+  width: 50%;
 }

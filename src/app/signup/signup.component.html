@@ -2,14 +2,53 @@
   <div class="signup-box">
     <label for="username">USER NAME</label>
     <input required type="text" name="userName" #userName ngModel />
-    <small *ngIf="f?.touched">username is touched</small>
+    <small
+      *ngIf="f.controls['userName']?.touched && f.controls['userName']?.errors"
+      >username is required</small
+    >
+
+    <!-- <small *ngIf="f?.touched">username is touched</small>
     <small *ngIf="f?.untouched">username is untouched</small>
     <small *ngIf="f?.dirty">username is dirty</small>
-    <small *ngIf="f?.pristine">username is pristine</small>
+    <small *ngIf="f?.pristine">username is pristine</small> -->
+  </div>
+  <div class="signup-box">
+    <label for="firstname">FIRST NAME</label>
+    <input required type="text" name="firstName" #firstName ngModel />
+    <small
+      *ngIf="
+        f.controls['firstName']?.touched && f.controls['firstName']?.errors
+      "
+      >firstName is required</small
+    >
+  </div>
+  <div class="signup-box">
+    <label for="lastname">LAST NAME</label>
+    <input required minlength="3" type="text" name="lastName" ngModel />
+    <small
+      *ngIf="
+        f.controls['lastName']?.touched &&
+        f.controls['lastName']?.errors &&
+        (f.controls['lastName']?.errors ?? ['required'])
+      "
+      >lastName is required</small
+    >
+    <small
+      *ngIf="
+        f.controls['lastName']?.touched &&
+        f.controls['lastName']?.errors &&
+        (f.controls['lastName']?.errors ?? ['minlength'])
+      "
+      >lastName should have atleast 3 letters</small
+    >
   </div>
   <div class="signup-box">
     <label for="password">PASSWORD</label>
-    <input required type="text" name="password" ngModel />
+    <input required type="text" name="password" #password ngModel />
+    <small
+      *ngIf="f.controls['password']?.touched && f.controls['password']?.errors"
+      >password is required</small
+    >
   </div>
   <div class="signup-button">
     <button [disabled]="f.invalid" (click)="senduserdata(f)">BUTTON</button>
