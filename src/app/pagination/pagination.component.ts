@@ -6,65 +6,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./pagination.component.css'],
 })
 export class PaginationComponent implements OnInit {
-  workersList = [
-    {
-      postal: '1',
-      id: '1',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '2',
-      id: '2',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '3',
-      id: '3',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '4',
-      id: '4',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '5',
-      id: '5',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '6',
-      id: '6',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '7',
-      id: '7',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-    {
-      postal: '8',
-      id: '8',
-      name: 'Faritha',
-      email: 'farithanoormohammed@gmail.com',
-      body: 'working as Web devoloper',
-    },
-  ];
   comments = [];
+  originaldata = [];
   filtercomments = [];
   pageLimit = 10;
   page = 1;
@@ -73,6 +16,7 @@ export class PaginationComponent implements OnInit {
       .get('https://jsonplaceholder.typicode.com/comments')
       .subscribe((data: any) => {
         this.comments = data;
+        this.originaldata = this.comments.slice();
         this.displaypage(1);
       });
   }
@@ -87,9 +31,22 @@ export class PaginationComponent implements OnInit {
     this.page = page;
   }
   search() {
-    // get the name from user
-    //   for each element in array check if it is matching
+    // get a text from user
+    let textFromUser = 'resley';
+    let searchText = '/' + textFromUser + '/i';
+    // for each element in array check if it is matching
+    let heading = Object.keys(this.originaldata[0]);
+    console.log(heading);
+    this.comments = this.originaldata.filter((eachData) => {
+      let ismatch = false;
+      ismatch = heading.some((eachhead) => {
+        return String(eachData[eachhead]).search(searchText) < 0;
+      });
+
+      return ismatch;
+    });
     // show the matching example
+    this.displaypage(1);
   }
   changepageLimit() {
     console.log(event);

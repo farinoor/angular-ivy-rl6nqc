@@ -14,12 +14,29 @@
   </div>
   <div class="signup-box">
     <label for="firstname">FIRST NAME</label>
-    <input required type="text" name="firstName" #firstName ngModel />
+    <input
+      required
+      minlength="3"
+      type="text"
+      name="firstName"
+      #firstName
+      ngModel
+    />
     <small
       *ngIf="
-        f.controls['firstName']?.touched && f.controls['firstName']?.errors
+        f.controls['firstName']?.touched &&
+        f.controls['firstName']?.errors &&
+        f.controls['firstName']?.errors?.['required']
       "
-      >firstName is required</small
+      >lastName is required</small
+    >
+    <small
+      *ngIf="
+        f.controls['firstName']?.touched &&
+        f.controls['firstName']?.errors &&
+        f.controls['firstName']?.errors?.['minlength']
+      "
+      >lastName should have atleast 3 letters</small
     >
   </div>
   <div class="signup-box">
@@ -29,7 +46,7 @@
       *ngIf="
         f.controls['lastName']?.touched &&
         f.controls['lastName']?.errors &&
-        (f.controls['lastName']?.errors ?? ['required'])
+        f.controls['lastName']?.errors?.['required']
       "
       >lastName is required</small
     >
@@ -37,7 +54,7 @@
       *ngIf="
         f.controls['lastName']?.touched &&
         f.controls['lastName']?.errors &&
-        (f.controls['lastName']?.errors ?? ['minlength'])
+        f.controls['lastName']?.errors?.['minlength']
       "
       >lastName should have atleast 3 letters</small
     >

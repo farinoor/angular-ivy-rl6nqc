@@ -6,7 +6,6 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  
   loginform: FormGroup;
   constructor(private fb: FormBuilder) {
     this.loginform = this.fb.group({
@@ -16,4 +15,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  login(): void {
+    console.log(this.loginform.value);
+  }
 }

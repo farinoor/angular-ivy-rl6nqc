@@ -1,14 +1,58 @@
-<div class="newlogin">
+<form class="newlogin" [formGroup]="loginform">
   <div class="login-group">
-    <label for="user name">USER NAME</label>
-    <input type="text" />
+    <label for="username">USER NAME</label>
+    <input
+      type="text"
+      name="username"
+      formControlName="username"
+      required
+      minlength="3"
+    />
+    <small
+      *ngIf="
+        loginform.controls['username']?.touched &&
+        loginform.controls['username']?.errors &&
+        loginform.controls['username']?.errors?.['required']
+      "
+      >lastName is required</small
+    >
+    <small
+      *ngIf="
+        loginform.controls['username']?.touched &&
+        loginform.controls['username']?.errors &&
+        loginform.controls['username']?.errors?.['minlength']
+      "
+      >lastName should have atleast 3 letters</small
+    >
   </div>
   <div class="login-group">
-    <label for="PASSWORD">PASSWORD</label>
-    <input type="text" />
+    <label for="password">PASSWORD</label>
+    <input
+      type="text"
+      name="password"
+      formControlName="password"
+      required
+      minlength="3"
+    />
+    <small
+      *ngIf="
+        loginform.controls['password']?.touched &&
+        loginform.controls['password']?.errors &&
+        loginform.controls['password']?.errors?.['required']
+      "
+      >lastName is required</small
+    >
+    <small
+      *ngIf="
+        loginform.controls['password']?.touched &&
+        loginform.controls['password']?.errors &&
+        loginform.controls['password']?.errors?.['minlength']
+      "
+      >lastName should have atleast 3 letters</small
+    >
   </div>
 
   <div>
-    <button>Login</button>
+    <button (click)="login()">Login</button>
   </div>
-</div>
+</form>
