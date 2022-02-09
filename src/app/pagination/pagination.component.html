@@ -1,14 +1,20 @@
 <div class="m-b-10">
-  <button class="option" (click)="displaypage(1)"><<</button>
-  <button class="option" (click)="displaypage(page - 1)"><</button>
+  <button class="option" (click)="displaypage(1)">
+    <i class="fas fa-fast-backward"></i>
+  </button>
+  <button class="option" (click)="displaypage(page - 1)">
+    <i class="fas fa-step-backward"></i>
+  </button>
   <button class="option" (click)="displaypage(1)">1</button>
   <button class="option" (click)="displaypage(2)">2</button>
   <button class="option" (click)="displaypage(3)">3</button>
   <button class="option" (click)="displaypage(4)">4</button>
   <button class="option" (click)="displaypage(5)">5</button>
-  <button class="option" (click)="displaypage(page + 1)">></button>
+  <button class="option" (click)="displaypage(page + 1)">
+    <i class="fas fa-step-forward"></i>
+  </button>
   <button class="option" (click)="displaypage(comments.length / pageLimit)">
-    >>
+    <i class="fas fa-fast-forward"></i>
   </button>
   <select (change)="changepageLimit()" name="page" id="page">
     <option value="5">5</option>

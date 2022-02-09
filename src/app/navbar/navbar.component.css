@@ -1,10 +1,19 @@
 li {
   display: inline-block;
-  padding: 6px;
+  padding: 10px;
 }
 a {
-  color: white;
+  color: #f5f5f7;
+  font-size: medium;
+  font-weight: 500;
 }
+
 nav {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.p-r-4 {
+  padding-right: 5px;
+}
+a:hover {
+  color: aquamarine;
 }

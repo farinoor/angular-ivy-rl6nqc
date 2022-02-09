@@ -1,13 +1,14 @@
 .signup {
-  background-color: burlywood;
+  background-color: rgba(0, 0, 0, 0.8);
   margin: auto;
   margin-top: 15%;
   width: 50%;
-  color: crimson;
+  color: white;
   padding: 10px;
+  border-radius: 5px;
 }
 .signup-box {
-  color: crimson;
+  color: white;
   padding: auto;
   margin-bottom: 10px;
   text-align: left;
@@ -16,23 +17,27 @@
   text-align: center;
 }
 button {
-  color: crimson;
-  background-color: cadetblue;
+  color: black;
+  background-color: aquamarine;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  border-radius: 30px;
 }
 small {
   width: 100%;
   color: red;
   display: block;
 }
-button:disabled {
+/* button:disabled {
   color: orange;
   background-color: grey;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+} */
+.p-r-10 {
+  padding-right: 10px;
 }

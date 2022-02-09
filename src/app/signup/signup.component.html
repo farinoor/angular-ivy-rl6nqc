@@ -1,6 +1,6 @@
 <form #f="ngForm" class="signup">
   <div class="signup-box">
-    <label for="username">USER NAME</label>
+    <label class="p-r-10" for="username">USER NAME</label>
     <input required type="text" name="userName" #userName ngModel />
     <small
       *ngIf="f.controls['userName']?.touched && f.controls['userName']?.errors"
@@ -13,7 +13,7 @@
     <small *ngIf="f?.pristine">username is pristine</small> -->
   </div>
   <div class="signup-box">
-    <label for="firstname">FIRST NAME</label>
+    <label class="p-r-10" for="firstname">FIRST NAME</label>
     <input
       required
       minlength="3"
@@ -40,7 +40,7 @@
     >
   </div>
   <div class="signup-box">
-    <label for="lastname">LAST NAME</label>
+    <label class="p-r-10" for="lastname">LAST NAME</label>
     <input required minlength="3" type="text" name="lastName" ngModel />
     <small
       *ngIf="
@@ -60,7 +60,7 @@
     >
   </div>
   <div class="signup-box">
-    <label for="password">PASSWORD</label>
+    <label class="p-r-10" for="password">PASSWORD</label>
     <input required type="text" name="password" #password ngModel />
     <small
       *ngIf="f.controls['password']?.touched && f.controls['password']?.errors"
@@ -68,6 +68,6 @@
     >
   </div>
   <div class="signup-button">
-    <button [disabled]="f.invalid" (click)="senduserdata(f)">BUTTON</button>
+    <button [disabled]="f.invalid" (click)="senduserdata(f)">Sign Up</button>
   </div>
 </form>

@@ -1,23 +1,35 @@
 .newlogin {
-  background-color: aquamarine;
+  background-color: rgba(0, 0, 0, 0.8);
   margin: auto;
-  margin-top: 15%;
   width: 50%;
-  color: blue;
+  color: white;
   padding: 10px;
+  border-radius: 4px;
 }
 .login-group {
-  color: blue;
-  padding: 10px;
+  color: white;
+  padding: 20px;
 }
 button {
-  color: blue;
-  background-color: chartreuse;
-  padding: 20px;
+  color: black;
+  background-color: aquamarine;
+  padding: 11px 0px;
   width: 50%;
+  font-size: 14px;
+  border-radius: 34px;
+  font-weight: bold;
 }
 small {
   width: 100%;
   color: red;
   display: block;
+}
+.login {
+  text-align: center;
+}
+.us {
+  padding-right: 10px;
+}
+.text-align {
+  text-align: center;
 }
