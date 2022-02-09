@@ -22,8 +22,8 @@
     <option value="45">45</option>
     <option value="50">55</option> -->
   </select>
-  <input type="text" placeholder="Search" />
-  <button class="button-det">Search</button>
+  <input type="text" placeholder="Search" [(ngModel)]="textFromUser" />
+  <button class="button-det" (click)="search()">Search</button>
   <p>current page:{{ page }}</p>
 </div>
 

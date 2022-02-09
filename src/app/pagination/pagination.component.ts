@@ -11,6 +11,7 @@ export class PaginationComponent implements OnInit {
   filtercomments = [];
   pageLimit = 10;
   page = 1;
+  textFromUser = '';
   constructor(private http: HttpClient) {
     this.http
       .get('https://jsonplaceholder.typicode.com/comments')
@@ -32,7 +33,7 @@ export class PaginationComponent implements OnInit {
   }
   search() {
     // get a text from user
-    let textFromUser = 'resley';
+    let textFromUser = this.textFromUser;
     let searchText = '/' + textFromUser + '/i';
     // for each element in array check if it is matching
     let heading = Object.keys(this.originaldata[0]);
@@ -40,7 +41,7 @@ export class PaginationComponent implements OnInit {
     this.comments = this.originaldata.filter((eachData) => {
       let ismatch = false;
       ismatch = heading.some((eachhead) => {
-        return String(eachData[eachhead]).search(searchText) < 0;
+        return String(eachData[eachhead]).includes(textFromUser);
       });
 
       return ismatch;
