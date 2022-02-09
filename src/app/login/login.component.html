@@ -14,7 +14,7 @@
         loginform.controls['username']?.errors &&
         loginform.controls['username']?.errors?.['required']
       "
-      >lastName is required</small
+      >UserName is required</small
     >
     <small
       *ngIf="
@@ -22,7 +22,7 @@
         loginform.controls['username']?.errors &&
         loginform.controls['username']?.errors?.['minlength']
       "
-      >lastName should have atleast 3 letters</small
+      >UserName should have atleast 3 letters</small
     >
   </div>
   <div class="login-group">
@@ -40,7 +40,7 @@
         loginform.controls['password']?.errors &&
         loginform.controls['password']?.errors?.['required']
       "
-      >lastName is required</small
+      >Password is required</small
     >
     <small
       *ngIf="
@@ -48,7 +48,7 @@
         loginform.controls['password']?.errors &&
         loginform.controls['password']?.errors?.['minlength']
       "
-      >lastName should have atleast 3 letters</small
+      >Password should have atleast 3 letters</small
     >
   </div>
 
